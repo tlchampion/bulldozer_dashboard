@@ -34,5 +34,5 @@ y_test = y_test[y_test.index.isin(idx2)]
 
 print(X_test.shape, y_test.shape)
 
-Xvalues = X_test.to_csv("./data/xvalues.csv")
-yvalues = y_test.to_csv("./data/yvalues.csv")
+Xvalues = X_test.to_csv("./data/xvalues.csv", index=False)
+yvalues = y_test.to_csv("./data/yvalues.csv", index=False)
