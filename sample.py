@@ -26,7 +26,7 @@ y_test = y_test[idx]
 choices = X_test.index.tolist()
 print(y_test.shape)
 
-idx2 = random.sample(choices, 200)
+idx2 = random.sample(choices, 50)
 print(idx2)
 
 X_test = X_test[X_test.index.isin(idx2)]
