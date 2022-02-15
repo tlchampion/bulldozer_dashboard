@@ -21,7 +21,7 @@ y_test_small = y_test[0:50]
 model = load(pkl_dir/"model_ed.joblib")
 # model = load(pkl_dir/"model2_best.joblib")
 rf_explainer = RegressionExplainer(
-    model, X_test_small, y_test_small, precision='float32')
+    model, X_test, y_test, precision='float32')
 db = ExplainerDashboard(
     rf_explainer, title="Bulldozer Blue Book", shap_interaction=False, whatif=False, hide_treepathgraph=True)
 db.to_yaml("dashboard.yaml", explainerfile=pkl_dir/"explainer.joblib",
