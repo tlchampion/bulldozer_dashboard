@@ -9,17 +9,12 @@ pkl_dir = Path.cwd() / "pkls"
 data_dir = Path.cwd()/"data"
 
 # regression
-X_test = pd.read_csv(data_dir/"Xtest_model_ed.csv")
-y_test = pd.read_csv(data_dir/"ytest_model_ed.csv")
+X_test = pd.read_csv(data_dir/"xvalues.csv")
+y_test = pd.read_csv(data_dir/"yvalues.csv")
 
-# X_test = pd.read_csv(data_dir/"Xtest_model2.csv")
-# y_test = pd.read_csv(data_dir/"ytest_model2.csv")
-
-X_test_small = X_test[0:50]
-y_test_small = y_test[0:50]
 
 model = load(pkl_dir/"model_ed.joblib")
-# model = load(pkl_dir/"model2_best.joblib")
+
 rf_explainer = RegressionExplainer(
     model, X_test, y_test, precision='float32')
 db = ExplainerDashboard(

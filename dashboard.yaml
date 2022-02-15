@@ -1,7 +1,7 @@
 dashboard:
   explainerfile: /Users/thomas/Dropbox/Programming/Projects/bulldozer_dashboard/pkls/explainer.joblib
   params:
-    title: Bulldozer Bluebook
+    title: Bulldozer Blue Book
     name: null
     description: "This dashboard shows the workings of a fitted\n            machine\
       \ learning model, and explains its predictions."
@@ -26,9 +26,10 @@ dashboard:
     importances: true
     model_summary: true
     contributions: true
-    whatif: true
+    whatif: false
     shap_dependence: true
     shap_interaction: false
     decision_trees: true
-    kwargs: {}
+    kwargs:
+      hide_treepathgraph: true
     tabs: null
