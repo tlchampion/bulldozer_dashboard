@@ -15,6 +15,6 @@ pkl_dir = Path.cwd() / "pkls"
 
 
 db = ExplainerDashboard.from_config(pkl_dir/"explainer.joblib",
-                                    "dashboard.yaml", title="Bulldozer Bluebook")
+                                    "dashboard.yaml", title="Bulldozer Blue Book")
 
 app = db.flask_server()
